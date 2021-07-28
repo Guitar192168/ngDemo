@@ -1,0 +1,37 @@
+<h2>信息登记表</h2>
+
+<div class="container">
+  <ul>
+
+
+    <li>
+      <input type="text" [(ngModel)]="info.name">
+    </li>
+
+    <li>性别:
+      <!--      radio里如何实现双向数据绑定-->
+      <input type="radio" value="1" name="sex" [(ngModel)]="info.sex" id="male"> <label for="male">男</label>
+      <input type="radio" value="2" name="sex" [(ngModel)]="info.sex" id="female"> <label for="female">女</label>
+    </li>
+
+    <li>
+      <label for="city">城市</label>
+
+      <select name="city" id="city" [(ngModel)]="info.city">
+        <option *ngFor="let item of info.cities" value="info.city">
+          {{item}}
+        </option>
+      </select>
+    </li>
+  </ul>
+
+
+  {{info | json}}
+  <br>
+  <br>
+
+  <!--todo 这里一定要加()-->
+  <button (click)="submit()">获取当前表单的值</button>
+</div>
+
+
