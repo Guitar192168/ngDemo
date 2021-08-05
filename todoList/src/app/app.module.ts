@@ -1,8 +1,10 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule} from "@angular/forms";
 
 import {AppComponent} from './app.component';
+
+//引入并配置服务
+import {StorageService} from './services/storage.service';
 import { SearchComponent } from './component/search/search.component';
 
 @NgModule({
@@ -11,9 +13,11 @@ import { SearchComponent } from './component/search/search.component';
     SearchComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule
   ],
-  providers: [],
+  providers: [
+    StorageService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
