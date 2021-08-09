@@ -7,12 +7,14 @@ import {AppComponent} from './app.component';
 import {StorageService} from './services/storage.service';
 import {SearchComponent} from './component/search/search.component';
 import {NewsComponent} from './component/news/news.component';
+import { HeaderComponent } from './component/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    NewsComponent
+    NewsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule

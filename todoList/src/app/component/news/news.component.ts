@@ -1,6 +1,7 @@
 /**
  *  ViewChild
  * 
+ * ①第一种是获取DOM节点
  *  1. 获取DOM节点
  * 
  *  <div #myBox>
@@ -18,6 +19,9 @@
 
     4. 这种方法想要获取dom，最早得在ngAfterViewInit()生命周期里
      
+
+    ②第二种是父组件调用子组件的方法
+    
  * 
  */
 
@@ -33,7 +37,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class NewsComponent implements OnInit {
 
   // 获取DOM节点
-  @ViewChild('myBox') myBox: any
+  @ViewChild('myBox') myBox: any;
+  @ViewChild('header') header: any;
 
   constructor() {
   }
@@ -42,11 +47,6 @@ export class NewsComponent implements OnInit {
     console.log(this.myBox, 'ngOnInit里查看dom节点')
   }
 
-  // ngAfterViewInit(): void {
-  //   console.log(this.myBox, 'ngAfterViewInit里查看dom节点')
-  //   console.log(this.myBox.nativeElement, 'ngAfterViewInit里查看dom节点')
-  //   this.myBox.nativeElement.style.backgroundColor = '#008c8c';
-  // }
 
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
@@ -57,7 +57,12 @@ export class NewsComponent implements OnInit {
     this.myBox.nativeElement.style.backgroundColor = '#008c8c';
     console.log(this.myBox.nativeElement.innerHTML);
 
+    this.header.run()
   }
 
+  getChildMethod(){
+    console.log('11');
+    this.header.run()
+  }
 
 }
