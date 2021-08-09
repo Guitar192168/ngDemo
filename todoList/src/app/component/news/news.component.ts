@@ -23,7 +23,7 @@
 
 
 
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-news',
@@ -51,12 +51,12 @@ export class NewsComponent implements OnInit {
   ngAfterViewInit(): void {
     //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
     //Add 'implements AfterViewInit' to the class.
-    console.log(this.myBox,'ngAfterViewInit里面查看dom节点')
-    console.log(this.myBox.nativeElement,'ngAfterViewInit里面查看dom节点');
+    console.log(this.myBox, 'ngAfterViewInit里面查看dom节点')
+    console.log(this.myBox.nativeElement, 'ngAfterViewInit里面查看dom节点');
     //其实是把dom节点赋值给nativeElement
     this.myBox.nativeElement.style.backgroundColor = '#008c8c';
     console.log(this.myBox.nativeElement.innerHTML);
-    
+
   }
 
 
