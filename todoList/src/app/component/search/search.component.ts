@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -7,6 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  private myGirlFriend: any = new Object();
+
   constructor() {
   }
 
@@ -14,10 +16,10 @@ export class SearchComponent implements OnInit {
     //获取不到dom节点
 
     let box: any = document.getElementById('box');
-    console.log(box.innerHTML)
-    box.style.color = '#008c8c';
-    box.style.height = 200
-    box.style.weight = 200
+    box.style.color = 'pink';
+    box.style.background = '#008c8c';
+    box.style.height = '200px';
+    box.style.width = '200px';
   }
 
   //视图加载完成以后触发的方法 dom加载完成  建议把dom元素都放在这个里面
@@ -25,8 +27,6 @@ export class SearchComponent implements OnInit {
     let box: any = document.getElementById('box');
 
     box.style.color = '#008c8c';
-    box.style.height = '200px';
-    box.style.weight = '200px';
     console.log(box.innerHTML)
   }
 
