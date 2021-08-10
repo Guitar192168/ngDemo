@@ -1,0 +1,17 @@
+<!-- 这里的方法不要加() 加()表示执行 -->
+<app-header [msg]="msg" [title]='title' [fatherMethod]='fatherMethod'></app-header>
+<br>
+<hr>
+<hr>
+<br>
+
+<div>我是父组件</div>
+
+<hr>
+<hr>
+
+
+<app-footer (outer)="formChild($event)"></app-footer>
+
+<br>
+<br>

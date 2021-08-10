@@ -8,13 +8,15 @@ import {StorageService} from './services/storage.service';
 import {SearchComponent} from './component/search/search.component';
 import {NewsComponent} from './component/news/news.component';
 import { HeaderComponent } from './component/header/header.component';
+import { TransitionComponent } from './component/transition/transition.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     NewsComponent,
-    HeaderComponent
+    HeaderComponent,
+    TransitionComponent
   ],
   imports: [
     BrowserModule

@@ -21,7 +21,7 @@
      
 
     ②第二种是父组件调用子组件的方法
-    
+
  * 
  */
 
@@ -61,7 +61,6 @@ export class NewsComponent implements OnInit {
   }
 
   getChildMethod(){
-    console.log('11');
     this.header.run()
   }
 
