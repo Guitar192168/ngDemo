@@ -18,25 +18,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
 
     // 1.同步获取
-    let data = this.request.getData();
-    console.log(data);
-
-
-
-    //2. 回调函数
-    this.request.getCallBackData((data: any) => {
-      console.log(data);
-    });
-
-    // 3. rxjs
-    let rxjsData = this.request.getRxjsData();
-
-    rxjsData.subscribe(data => {
-      console.log(data);
-    })
-
-
-    // 4.可以取消请求的rxjs
     let unSubscribeData = this.request.getUnsubscribeRxjs();
 
     let un = unSubscribeData.subscribe(data => {
