@@ -7,6 +7,17 @@
  * @FilePath: /ngDemo-master/router08/src/app/components/home/home.component.html
 -->
 <p>home works!</p>
+
+<button (click)="goToPage()">js控制路由跳转</button>
+<br>
+<br>
+<br>
+
+<button (click)="goGetPage()">通过js进行get传值</button>
+<br>
+<br>
+<br>
+
 <ul *ngFor="let item of list;let key=index">
   <!-- <a href="/product?id={{key}}" >{{key}}-------{{item}}</a> -->
 
