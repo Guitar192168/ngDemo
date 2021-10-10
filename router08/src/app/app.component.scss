@@ -1,0 +1,14 @@
+.header {
+  width: 300px;
+  background-color: rgb(248, 231, 231);
+  display: flex;
+
+  a {
+    color: #008c8c;
+    margin: 30px;
+  }
+
+  .active {
+    color: skyblue;
+  }
+}

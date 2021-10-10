@@ -1,0 +1,26 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-10 18:22:08
+ * @LastEditTime: 2021-10-10 18:55:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /ngDemo-master/router08/src/app/app.component.html
+-->
+
+<div>我是首页</div>
+
+<header class="header">
+  <!-- <a [routerLink]="[ '/home' ]">首页</a>
+  <a routerLink='/product'>商品</a> -->
+
+
+  <!-- <a [routerLink]="[ '/path', routeParam ]">name</a> -->
+
+
+
+  <div>//active是类名，有任意写法，但是routerLinkActive是固定写法</div>
+  <a [routerLink]="[ '/home',  ]" routerLinkActive='active'>首页</a> 
+  <a [routerLink]="[ '/product',  ]" routerLinkActive='active'>商品</a>
+</header>
+
+<router-outlet></router-outlet>

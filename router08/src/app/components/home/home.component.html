@@ -1,0 +1,21 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-10-10 18:24:04
+ * @LastEditTime: 2021-10-10 19:25:26
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /ngDemo-master/router08/src/app/components/home/home.component.html
+-->
+<p>home works!</p>
+<ul *ngFor="let item of list;let key=index">
+  <!-- <a href="/product?id={{key}}" >{{key}}-------{{item}}</a> -->
+
+  <!-- <a routerLink='/product'  [queryParams]='{id:key}'  >{{key}}-------{{item}}</a> -->
+  <a [routerLink]="['/product']" [queryParams]='{id:key}'>{{key}}-------{{item}}</a>
+
+
+  <div style="margin: 10px;">
+    <a [routerLink]="[ '/detail/', key ]">学习动态路由{{key}}-------{{item}}</a>
+  </div>
+
+</ul>
